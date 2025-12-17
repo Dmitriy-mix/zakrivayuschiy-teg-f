@@ -25,7 +25,7 @@
   padding-top: 100px;
   min-block-size: 100dvb;
   position: relative;
-  font-weight: var(--text-font-weight);
+  font-variation-settings: "wght" var(--text-font-weight);
 }
 
 .header {
@@ -76,7 +76,7 @@
   border-bottom: 0;
   padding: 4px 10px;
   font-size: var(--font-size);
-  font-weight: var(--title-font-weight);
+  font-variation-settings: "wght" var(--title-font-weight);
 }
 
 .card-block__content {
