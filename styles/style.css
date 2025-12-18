@@ -115,10 +115,7 @@
   display: block;
 }
 
-@supports (
-  (text-stroke: 1px var(--bg-color)) or
-    (-webkit-text-stroke: 1px var(--bg-color))
-) {
+@supports ((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
   .card-block__content-title {
     text-shadow: none;
     text-stroke: 1px var(--bg-color);
@@ -126,10 +123,7 @@
   }
 }
 
-@supports (
-  (object-view-box: inset(10px 35px 10px 10px)) or
-    (-webkit-object-view-box: inset(10px 35px 10px 10px))
-) {
+@supports ((object-view-box: inset(10px 35px 10px 10px)) or (-webkit-object-view-box: inset(10px 35px 10px 10px))) {
   .card-block__content-image {
     object-view-box: inset(10px 35px 10px 10px);
     -webkit-object-view-box: inset(10px 35px 10px 10px);
@@ -183,6 +177,7 @@
   background: var(--bg-color);
   overflow: hidden;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .button-item::before {
@@ -194,7 +189,7 @@
   top: 0;
   left: 0;
   background-color: currentColor;
-  transition: box-shadow 0.3s ease, transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .button-item:focus {
@@ -338,11 +333,10 @@ dialog[open] {
 }
 
 .image-filter-saturated-hr-brightness-blur-contrast {
-  filter: saturate(230%) hue-rotate(115deg) brightness(85%) blur(0.2rem)
-    contrast(55%);
+  filter: saturate(230%) hue-rotate(115deg) brightness(85%) blur(0.2rem) contrast(55%);
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .header {
     min-block-size: 328px;
   }
